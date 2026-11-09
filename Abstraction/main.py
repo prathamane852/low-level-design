@@ -61,6 +61,7 @@ class PetrolCar(Car):
         print(f"{self.brand} {self.model}: Petrol engine stopped.")
 
     # Internal (hidden) helpers — the user never calls these
+    # These methods are private to the PetrolCar class and are not part of the Car interface.
     def _inject_fuel(self) -> None:
         pass
 
@@ -89,6 +90,7 @@ class ElectricCar(Car):
         self.speed = 0
         print(f"{self.brand} {self.model}: Motor powered off.")
 
+    # This method is private to the ElectricCar class and is not part of the Car interface.
     def _check_battery(self) -> None:
         pass
 
